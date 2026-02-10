@@ -1,0 +1,7 @@
+[
+  {
+    "query": "sum(kube_pod_container_status_restarts_total{namespace='robot-shop'})",
+    "timestamp": "2025-02-11T11:00:20Z",
+    "value": 3
+  }
+]

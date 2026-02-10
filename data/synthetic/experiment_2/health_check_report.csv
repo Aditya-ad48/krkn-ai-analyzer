@@ -1,0 +1,7 @@
+timestamp,application,url,status_code,response_time_ms,error_message
+2025-02-11T11:00:00,catalogue,/catalogue/categories,200,35,
+2025-02-11T11:00:10,cart,/cart/add,200,40,
+2025-02-11T11:00:20,catalogue,/catalogue/categories,503,800,Temporary overload
+2025-02-11T11:00:30,catalogue,/catalogue/categories,200,50,
+2025-02-11T11:00:40,cart,/cart/add,200,45,
+2025-02-11T11:00:50,checkout,/checkout,200,55,

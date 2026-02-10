@@ -1,0 +1,12 @@
+fitness_function:
+  query: 'sum(kube_pod_container_status_restarts_total{namespace="robot-shop"})'
+  type: point
+
+health_checks:
+  applications:
+    - name: catalogue
+      url: "$HOST/catalogue/categories"
+    - name: cart
+      url: "$HOST/cart/add/1/Watson/1"
+    - name: checkout
+      url: "$HOST/checkout"

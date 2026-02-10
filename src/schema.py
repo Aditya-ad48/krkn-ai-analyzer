@@ -35,3 +35,24 @@ class ExperimentResult(BaseModel):
     health_events: List[HealthEvent] = []
     prometheus_metrics: Optional[List[Dict[str, Any]]] = None
     raw_files: Optional[Dict[str, str]] = None
+
+class EvidenceItem(BaseModel):
+    """Single piece of evidence with citation"""
+    file: str = Field(description="Source file name")
+    line: Optional[str] = Field(None, description="Line number or section")
+    detail: str = Field(description="What this evidence shows")
+
+class RemediationStep(BaseModel):
+    """Single actionable remediation"""
+    step: str = Field(description="What to do")
+    impact: str = Field(description="high, medium, or low")
+    rationale: str = Field(description="Why this helps")
+
+class StructuredRCA(BaseModel):
+    """Structured Root Cause Analysis output"""
+    hypothesis: str = Field(description="Root cause summary")
+    confidence: float = Field(ge=0.0, le=1.0, description="Confidence 0-1")
+    affected_components: List[str] = Field(description="Services/pods impacted")
+    evidence: List[EvidenceItem] = Field(description="Supporting evidence with citations")
+    remediations: List[RemediationStep] = Field(description="Ranked action items")
+    missing_data: Optional[List[str]] = Field(None, description="What observability is missing")
