@@ -1,0 +1,40 @@
+{
+  "generation_0": [
+    {
+      "scenario_id": "scenario_0_0",
+      "fitness_score": 0.82,
+      "scenario_type": "pod_kill",
+      "config": {
+        "namespace": "robot-shop",
+        "pod_name": "cart-.*",
+        "kill_count": 1
+      }
+    },
+    {
+      "scenario_id": "scenario_0_1",
+      "fitness_score": 0.61,
+      "scenario_type": "network_delay",
+      "config": {
+        "namespace": "robot-shop",
+        "latency_ms": 300
+      }
+    }
+  ],
+  "generation_1": [
+    {
+      "scenario_id": "scenario_1_0",
+      "fitness_score": 0.34,
+      "scenario_type": "pod_kill",
+      "config": {
+        "namespace": "robot-shop",
+        "pod_name": "cart-.*",
+        "kill_count": 2
+      }
+    }
+  ],
+  "best_overall": {
+    "scenario_id": "scenario_1_0",
+    "fitness_score": 0.34,
+    "generation": 1
+  }
+}

@@ -1,0 +1,15 @@
+streamlit>=1.22.0
+pandas>=2.0
+numpy>=1.24
+plotly>=5.14
+pydantic>=1.10
+pyyaml>=6.0
+scikit-learn>=1.2
+networkx>=3.1
+langchain-groq>=0.1.0
+chromadb>=0.3.23
+python-dotenv>=1.0
+ruptures>=1.1.6
+gunicorn>=20.1
+langchain-community>=0.1.0
+

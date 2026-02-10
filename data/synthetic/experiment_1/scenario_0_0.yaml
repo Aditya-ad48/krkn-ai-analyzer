@@ -1,0 +1,6 @@
+scenario_type: pod-scenarios
+namespace: robot-shop
+label_selector: service=cart
+kill_count: 1
+kill_interval: 10
+duration: 60

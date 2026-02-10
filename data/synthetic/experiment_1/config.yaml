@@ -1,0 +1,15 @@
+fitness_function:
+  type: prometheus
+  query: sum(kube_pod_container_status_restarts_total)
+  threshold: 5
+
+slo:
+  latency_ms: 500
+  error_rate: 0.01
+
+health_checks:
+  applications:
+    - name: cart
+      url: /cart/add
+    - name: checkout
+      url: /checkout
